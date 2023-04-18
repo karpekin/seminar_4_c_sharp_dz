@@ -28,36 +28,49 @@
 // 9012 -> 12
 
 
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int Counter(int num)
-{
-    int i = 0;
-    while (num > 0)
-        {
-            num = num/10;
-            i++;
-        }
-    return i;
-}
+// int Counter(int num)
+// {
+//     int i = 0;
+//     while (num > 0)
+//         {
+//             num = num/10;
+//             i++;
+//         }
+//     return i;
+// }
 
-int count = Counter(number);
+// int count = Counter(number);
 
-int Summ(int num)
-{
-    int sum = 0;
-    for  (int j = 0; j < count; j++)
-        {
+// int Summ(int num)
+// {
+//     int sum = 0;
+//     for  (int j = 0; j < count; j++)
+//         {
     
-            sum = sum + num%10;
-            num = num/10;  
+//             sum = sum + num%10;
+//             num = num/10;  
     
-        }
-    return sum;
+//         }
+//     return sum;
+// }
+
+// int s = Summ(number);
+// Console.WriteLine(s);
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+int[] array = new int[8];
+void InputArray()
+{
+ for(int i = 0; i < 8; i++)
+ {
+    Console.Write("Введите очередной элемент массива: ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
+ }
 }
-
-int s = Summ(number);
-Console.WriteLine(s);
-
-   
+InputArray();
+Console.WriteLine(String.Join(", ", array)); 
